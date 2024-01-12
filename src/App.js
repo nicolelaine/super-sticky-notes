@@ -28,10 +28,11 @@ class App extends Component {
   };
 
   render() {
+    const { searchText, notes } = this.state;
     return (
       <div>
-        <Header />
-        <NotesList />
+        <Header searchText={this.state.searchText} />
+        <NotesList notes={this.state.notes} />
       </div>
     );
   }
