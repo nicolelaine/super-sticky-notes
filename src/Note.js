@@ -1,14 +1,20 @@
 import React from "react";
 
-const Note = (props) => {
-  return (
-    <li className="note">
-      {console.log(props)}
-      <input className="note__title" type="text" placeholder="Title" />
-      <textarea className="note__description" placeholder="Description..." />
-      <span className="note__delete">X</span>
-    </li>
-  );
-};
+const Note = (props) => (
+  <li className="note">
+    <input
+      type="text"
+      placeholder="Title"
+      className="note__title"
+      value={props.note.title}
+    />
+    <textarea
+      placeholder="Description..."
+      className="note__description"
+      value={props.note.description}
+    />
+    <span className="note__delete">X</span>
+  </li>
+);
 
 export default Note;
