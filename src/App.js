@@ -28,7 +28,6 @@ class App extends Component {
   };
 
   render() {
-    const { searchText, notes } = this.state;
     return (
       <div>
         <Header searchText={this.state.searchText} />
